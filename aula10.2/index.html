@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        #caixa {
+            max-width: 500px;
+            min-height: 300px;
+            background-color: yellow;
+            margin: auto;
+            font-size: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h1 {
+            font-family:monospace;
+            font-weight: lighter;
+            background-color: black;
+            color: yellow;
+            border-radius: 5px;
+        }
+
+        #resultado {
+            text-align: center;
+            padding: 60px;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    </style>
+</head>
+<div id="caixa">
+    <body>
+        <h1>Somando Valores</h1>
+        <input type="number" name="txtn1" id="txtn1"> <br> + <br>
+        <input type="number" name="txtn2" id="txtn2"> <br>
+        <br><input type="button" value="somar" onclick="somar()">
+        <div id="resultado"></div> 
+        <script>
+            function somar() {
+                var tn1 = document.getElementById('txtn1')
+                var tn2 = document.getElementById('txtn2')
+                  /* Ou também poderia ser: var tn2 = document.querySelector("input#txtn2") */
+                var res = document.getElementById('resultado')
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                var s = n1 + n2
+                res.innerHTML = s
+            }
+        </script>
+    </body>
+</div>
+</html>
