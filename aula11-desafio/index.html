@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora do Viajante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="data">
+        <h1>Calculadora do Viajante</h1>
+        Data 1
+        <input type="date" id="d1" >
+        <br>
+        Data 2
+        <input type="date" id="d2">
+        <br><button onclick="calculateDays()">Diferença</button>
+        <p id="output">Está entrando ou saindo do Schengen? <br>
+        Não sabe quanto tempo já está no país? <br>
+        Quer saber quanto tempo mais você pode ficar onde está? <br> <br>
+        <strong>Ora, bolas! Seus problemas acabaram!</strong>
+        </p>
+    </div>
+    <script>
+        function calculateDays() {
+        var d1 = document.getElementById("d1").value;
+        var d2 = document.getElementById("d2").value;    
+        const dateOne = new Date(d1);
+        const dateTwo = new Date(d2);
+        const time = Math.abs(dateTwo - dateOne);
+        const days = Math.ceil(time / (1000 * 60 * 60 * 24));
+
+
+        if (days == 1) {
+            document.getElementById("output").innerHTML = `A diferença entre as datas selecionadas <br>é de <strong>${days}</strong> dia!`
+        }
+
+        else {
+            document.getElementById("output").innerHTML = `A diferença entre as datas selecionadas <br>é de <strong>${days}</strong> dias!`; 
+        }
+    }    
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+@charset "UTF8";
+
+body {
+    background-image: url(imagens/plane2.jpg);
+    background-position: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+h1 {
+    font-family: monospace;
+    font-weight: lighter;
+    
+}
+
+#data {
+    max-width: 300px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.466);
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+input {
+    margin: 10px;
+}
