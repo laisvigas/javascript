@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            font-family: monospace;
+            color: #c87c13;
+        }
+        section {
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+            max-width: 300px;
+            min-height: 300px;
+            background-color: #ff9500;
+            color: rgb(255, 255, 255) ;
+            border-radius: 30px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        input {
+            background-color: rgba(255, 89, 0, 0.4);
+            border-radius: 50px;
+            color: rgba(255, 255, 255, 0.415);
+            border-color: rgba(240, 248, 255, 0.379);
+            padding: 5px;
+        }
+
+        input:hover {
+            background-color: rgba(255, 89, 0, 0.666);
+            color: rgba(255, 255, 255, 0.725);
+        }
+    </style>
+    <script>
+        function verificar() {
+        var numero = document.getElementById("numero")
+        var resultado1 = document.getElementById("resultado1")
+        var resultado2 = document.getElementById("resultado2")
+        var resultado3 = document.getElementById("resultado3")
+        var resultado4 = document.getElementById("resultado4")
+        var resultado5 = document.getElementById("resultado5")
+        var resultado6 = document.getElementById("resultado6")
+        var resultado7 = document.getElementById("resultado7")
+        var resultado8 = document.getElementById("resultado8")
+        var resultado9 = document.getElementById("resultado9")
+        var resultado10 = document.getElementById("resultado10")
+        var mult = numero.value 
+        resultado1.innerHTML = `${numero.value} x 1 = ${numero.value * 1}`
+        resultado2.innerHTML = `${numero.value} x 2 = ${numero.value * 2}`
+        resultado3.innerHTML = `${numero.value} x 3 = ${numero.value * 3}`
+        resultado4.innerHTML = `${numero.value} x 4 = ${numero.value * 4}`
+        resultado5.innerHTML = `${numero.value} x 5 = ${numero.value * 5}`
+        resultado6.innerHTML = `${numero.value} x 6 = ${numero.value * 6}`
+        resultado7.innerHTML = `${numero.value} x 7 = ${numero.value * 7}`
+        resultado8.innerHTML = `${numero.value} x 8 = ${numero.value * 8}`
+        resultado9.innerHTML = `${numero.value} x 9 = ${numero.value * 9}`
+        resultado10.innerHTML = `${numero.value} x 10 = ${numero.value * 10}`
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Tabuada de Multiplicação</h1>
+    </header>
+    <section>
+        <p>Digite ou selecione um número <br><br><input type="number" name="numero" id="numero"></p>
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="resultado1"></div>
+        <div id="resultado2"></div>
+        <div id="resultado3"></div>
+        <div id="resultado4"></div>
+        <div id="resultado5"></div>
+        <div id="resultado6"></div>
+        <div id="resultado7"></div>
+        <div id="resultado8"></div>
+        <div id="resultado9"></div>
+        <div id="resultado10"></div>
+    </section>
+</body>
+</html>
